@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    -webkit-font-smoothing: auto;
+    -moz-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    background-color: #fff;
+    color: #000;
+  }
+  .velocity-chart-container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .velocity-chart-container .chart {
+    width: 100%;
+    height: 80%;
+    border: 1px solid black;
+    border-top-width: 0;
+    border-right-width: 0;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .chart label {
+    font-weight: bold;
+  }
+  .chart .x-label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+  .chart .y-label {
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  }
+  .bar {
+    
+    flex: 1;
+    position: relative;
+  }
+  .bar label {
+    font-weight: normal;
+    background-color: #000;
+    color: #fff;
+    padding: 3px;
+    position:absolute;
+    border-radius: 4px;
+    width: max-content;
+    transform: translate(-50%, -120%);
+    opacity: 0;
+    z-index: 1;
+  }
+  .bar:hover label {
+    opacity: 1;
+  }
