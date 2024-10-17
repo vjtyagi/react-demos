@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import CHART_DATA, { ChartRecord } from "./data/chart";
-import "./styles/velocity.css";
+import "./velocity.css";
 
 function Velocity() {
   const [isChartVisible, setChartVisible] = useState(false);

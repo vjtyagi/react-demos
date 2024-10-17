@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import Velocity from "./Velocity.tsx";
+import Velocity from "./components/velocity/Velocity.tsx";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
