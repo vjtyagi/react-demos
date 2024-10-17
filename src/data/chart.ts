@@ -1,4 +1,10 @@
-const CHART_DATA = [
+export type ChartRecord = {
+  id: string;
+  name: string;
+  ticketCount: number;
+  colour: string;
+};
+const CHART_DATA: ChartRecord[] = [
   { id: "dep-1", name: "Legal", ticketCount: 32, colour: "#3F888F" },
   { id: "dep-2", name: "Sales", ticketCount: 20, colour: "#FFA420" },
   { id: "dep-3", name: "Engineering", ticketCount: 60, colour: "#287233" },

@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
-import CHART_DATA from "./data/chart";
+import CHART_DATA, { ChartRecord } from "./data/chart";
 import "./styles/velocity.css";
+
 function Velocity() {
   const [isChartVisible, setChartVisible] = useState(false);
   const maxHeight = useMemo(() => {
@@ -15,23 +16,43 @@ function Velocity() {
 
   return (
     <>
-      <div className="velocity-chart-container">
+      <div className="container">
         <button onClick={handleChartToggle}>Toggle Chart</button>
-        {isChartVisible && (
-          <div className="chart">
-            {CHART_DATA.map((data) => {
-              return <Bar key={data.id} data={data} max={maxHeight} />;
-            })}
-            <label className="y-label">Number of tickets</label>
-            <label className="x-label">Departments</label>
-          </div>
-        )}
+        {
+          <BarChart
+            data={CHART_DATA}
+            maxHeight={maxHeight}
+            visible={isChartVisible}
+          />
+        }
       </div>
     </>
   );
 }
 
-function Bar({ data, max }: any) {
+function BarChart({
+  data,
+  maxHeight,
+  visible,
+}: {
+  data: ChartRecord[];
+  maxHeight: number;
+  visible: boolean;
+}) {
+  return (
+    <div style={{ opacity: visible ? 1 : 0 }} className="chart-container">
+      <div className="chart">
+        {data.map((record: ChartRecord) => {
+          return <Bar key={record.id} data={record} max={maxHeight} />;
+        })}
+      </div>
+      <label className="y-label">Number of tickets</label>
+      <label className="x-label">Departments</label>
+    </div>
+  );
+}
+
+function Bar({ data, max }: { data: ChartRecord; max: number }) {
   return (
     <div
       className="bar"

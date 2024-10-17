@@ -17,38 +17,46 @@
     background-color: #fff;
     color: #000;
   }
-  .velocity-chart-container {
-    width: 500px;
-    height: 500px;
+  .container {
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
-  .velocity-chart-container .chart {
+
+  .chart-container {
+    display: flex;
+    width: 80%;
+    height: 500px;
+    position: relative;
+    padding: 10px;
+    margin-top: 30px;
+    transition: all 0.5s ease-in;
+  }
+  .chart-container .chart {
     width: 100%;
-    height: 80%;
+    height: 100%;
     border: 1px solid black;
     border-top-width: 0;
     border-right-width: 0;
-    position: relative;
     display: flex;
     align-items: flex-end;
     gap: 20px;
   }
-  .chart label {
+  .chart-container label {
     font-weight: bold;
   }
-  .chart .x-label {
+  .chart-container .x-label {
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%)
   }
-  .chart .y-label {
+  .chart-container .y-label {
     position: absolute;
     top: 50%;
-    left: -5%;
+    margin-left: -10px;
     transform: translateX(-50%) translateY(-50%) rotate(-90deg);
   }
   .bar {
@@ -67,6 +75,7 @@
     transform: translate(-50%, -120%);
     opacity: 0;
     z-index: 1;
+    transition: all 0.3s ease-in;
   }
   .bar:hover label {
     opacity: 1;
