@@ -1,0 +1,27 @@
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+    background-color: #2f3640;
+}
+.nodes {
+    list-style: none;
+}
+.node a {
+    color: #0097e6;
+    text-decoration: none;
+}
+.node .label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.node .label span {
+    line-height: 0;
+    cursor: pointer;
+}
+.node .node-content {
+    padding-left: 15px;
+}
