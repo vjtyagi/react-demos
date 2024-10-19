@@ -1,11 +1,11 @@
 const LINK: LINK = "https://youtube.com/devtoolstech/videos";
 export type LINK = string;
-export type Article = {
+export interface Article {
   id: number;
   label: string;
   link: LINK;
   children?: Article[];
-};
+}
 const IOS_ARTICLES = {
   id: 6,
   label: "iOS Articles",

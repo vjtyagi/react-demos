@@ -5,23 +5,23 @@
     padding: 20px;
     background-color: #2f3640;
 }
-.nodes {
+.list {
     list-style: none;
 }
-.node a {
+.list-item a {
     color: #0097e6;
     text-decoration: none;
 }
-.node .label {
+.list-item .label {
     display: flex;
     align-items: center;
     gap: 4px;
 }
-
-.node .label span {
+.list-item .label span {
     line-height: 0;
     cursor: pointer;
 }
-.node .node-content {
+
+.list-item .list-item-children {
     padding-left: 15px;
 }
