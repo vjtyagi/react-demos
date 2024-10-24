@@ -1,4 +1,10 @@
-import { MouseEventHandler, useCallback, useEffect, useState } from "react";
+import {
+  MouseEventHandler,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import "./reservation.css";
 import UserDetails from "./UserDetails";
 import useFetchData from "./useFetchData";
@@ -8,11 +14,17 @@ export default function ReservationSystem() {
     "rooms_data",
     []
   );
-  const [roomsData, setRoomsData] = useState<Room[]>(data);
+  const [roomsData, setRoomsData] = useState<Room[]>([]);
 
   const { data: userData, status: userDetailsStatus } =
     useFetchData<User | null>("user_data", null);
-  const [userDetails, setUserDetails] = useState<User | null>(userData);
+  const [userDetails, setUserDetails] = useState<User | null>(null);
+
+  const roomCost = useMemo(() => {
+    return roomsData
+      .filter((room) => room.isReserved)
+      .reduce((acc, curr) => acc + curr.cost, 0);
+  }, [roomsData]);
 
   useEffect(() => {
     setRoomsData([...data]);
@@ -28,11 +40,7 @@ export default function ReservationSystem() {
         return prev
           ? {
               ...prev,
-              credits:
-                userData?.credits -
-                roomsData
-                  .filter((room) => room.isReserved)
-                  .reduce((acc, curr) => acc + curr.cost, 0),
+              credits: userData?.credits - roomCost,
             }
           : null;
       });
@@ -53,6 +61,8 @@ export default function ReservationSystem() {
       });
     });
   };
+
+  console.log("ReservationSystem rendered");
 
   return (
     <div className="reservation-system">
