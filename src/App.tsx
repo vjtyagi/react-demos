@@ -13,6 +13,9 @@ function App() {
           <li>
             <Link to="/confluence">Confluence</Link>
           </li>
+          <li>
+            <Link to="/reservation">Room Reservation</Link>
+          </li>
         </ol>
       </nav>
     </>

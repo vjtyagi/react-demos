@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    -webkit-font-smoothing: auto;
+    -moz-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    background-color: #0e1726;
+    color: #fff;
+    border-color: #fff;
+  }
+  table,th, td {
+    border: 1px solid #fff;
+  }
+  
+  main {
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .reservation-system .title {
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  
+.details-container {
+    display: flex;
+    justify-content: space-between;
+}
+.details-container .room-list-container {
+    width: 80%;
+}
+.details-container .users-details-section {
+    width: 20%;
+    border: 1px solid #fff;
+
+}
+.details-container .user-details-container {
+    border-left: 1px solid #fff;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.user-info {
+    padding: 10px 0;
+    border-bottom:  1px solid #fff;
+}
+.rooms-list-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    margin: 0 auto;
+}
+.room {
+    text-align: center;
+    background-color: #2f3640;
+    padding: 20px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.room__status--available {
+    color: green;
+}
+.room__status--reserved {
+    color: #3a96e6;
+}
+.room__status--credit {
+    color: red;
+}
+.reserved-rooms table th, td {
+    padding: 5px
+}
