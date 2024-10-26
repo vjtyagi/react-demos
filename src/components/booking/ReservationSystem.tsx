@@ -14,10 +14,10 @@ export default function ReservationSystem() {
     "rooms_data",
     []
   );
-  const [roomsData, setRoomsData] = useState<Room[]>([]);
-
   const { data: userData, status: userDetailsStatus } =
     useFetchData<User | null>("user_data", null);
+
+  const [roomsData, setRoomsData] = useState<Room[]>([]);
   const [userDetails, setUserDetails] = useState<User | null>(null);
 
   const roomCost = useMemo(() => {
