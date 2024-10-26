@@ -75,6 +75,7 @@
     padding: 20px 15px;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 180px;
 }
 .room__status--available {
     color: green;
