@@ -1,0 +1,71 @@
+.explorer {
+    width: 35%;
+    height: 100vh;
+}
+.explorer-box {
+    width: 100%;
+    min-height: 80vh;
+    border: 1px solid #fff;
+}
+.explorer-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #fff;
+    justify-content: space-between;
+}
+.header-actions {
+    display: flex;
+}
+.icon {
+    padding: 0 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.explorer-title {
+    display: flex;
+    align-items: center;
+}
+.file-down {
+    line-height: 0.5;
+}
+.explorer-body {
+    padding: 20px 10px;
+}
+.file-label {
+    font-size: 1.2rem;
+}
+.box-row {
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    padding: 5px 0px;
+    justify-content: space-between;
+}
+.box-row label {
+    cursor: pointer;
+}
+.box-row:hover label{
+    color: #2092d4;
+}
+.file-details-section {
+    display: flex;
+    align-items: center;
+}
+.file-actions {
+    display: flex;
+    align-items: center;
+}
+.file-input {
+    height:25px;
+    background-color: #fff;
+    color:#000;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+.node-content {
+    padding-left: 15px;
+}

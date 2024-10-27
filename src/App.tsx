@@ -16,6 +16,9 @@ function App() {
           <li>
             <Link to="/reservation">Room Reservation</Link>
           </li>
+          <li>
+            <Link to="/explorer">File Explorer</Link>
+          </li>
         </ol>
       </nav>
     </>
