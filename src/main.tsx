@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Confluence from "./components/confluence/Confluence.tsx";
 import ReservationSystem from "./components/booking/ReservationSystem.tsx";
 import Explorer from "./components/FileExplorer/Explorer.tsx";
+import AccordionDemo from "./components/accordion/AccordionDemo.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/confluence" element={<Confluence />} />
         <Route path="/reservation" element={<ReservationSystem />} />
         <Route path="/explorer" element={<Explorer />} />
+        <Route path="/accordion" element={<AccordionDemo />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

@@ -19,6 +19,9 @@ function App() {
           <li>
             <Link to="/explorer">File Explorer</Link>
           </li>
+          <li>
+            <Link to="/accordion">Accordion</Link>
+          </li>
         </ol>
       </nav>
     </>
