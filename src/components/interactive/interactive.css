@@ -1,0 +1,17 @@
+.box-container {
+    width: 500px;
+    margin: 0 auto;
+    
+}
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.box--selected {
+    background-color: green;
+}
+.box-hidden {
+    visibility: hidden;
+}

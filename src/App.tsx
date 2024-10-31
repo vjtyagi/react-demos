@@ -22,6 +22,9 @@ function App() {
           <li>
             <Link to="/accordion">Accordion</Link>
           </li>
+          <li>
+            <Link to="/interactive">Interactive Shape Game</Link>
+          </li>
         </ol>
       </nav>
     </>

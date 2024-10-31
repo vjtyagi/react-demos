@@ -8,6 +8,7 @@ import Confluence from "./components/confluence/Confluence.tsx";
 import ReservationSystem from "./components/booking/ReservationSystem.tsx";
 import Explorer from "./components/FileExplorer/Explorer.tsx";
 import AccordionDemo from "./components/accordion/AccordionDemo.tsx";
+import InteractiveShapeGame from "./components/interactive/InteractiveShapeGame.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/reservation" element={<ReservationSystem />} />
         <Route path="/explorer" element={<Explorer />} />
         <Route path="/accordion" element={<AccordionDemo />} />
+        <Route path="/interactive" element={<InteractiveShapeGame />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
