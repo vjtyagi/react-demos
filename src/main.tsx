@@ -10,6 +10,7 @@ import Explorer from "./components/FileExplorer/Explorer.tsx";
 import AccordionDemo from "./components/accordion/AccordionDemo.tsx";
 import InteractiveShapeGame from "./components/interactive/InteractiveShapeGame.tsx";
 import Game from "./components/country_capital_game/Game.tsx";
+import CounterAppHistory from "./components/counter_app/CounterAppHistory.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/accordion" element={<AccordionDemo />} />
         <Route path="/interactive" element={<InteractiveShapeGame />} />
         <Route path="/countrygame" element={<Game />} />
+        <Route path="/counterapp" element={<CounterAppHistory />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

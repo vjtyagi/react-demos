@@ -1,0 +1,20 @@
+.counter-app-history {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.actions {
+    display: flex;
+    gap: 10px;
+}
+.counter-list {
+    min-width: 50px;
+    min-height: 100px;
+    border: 1px solid black;
+    list-style:none;
+}
+.counter-list__item {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: 10px;
+}

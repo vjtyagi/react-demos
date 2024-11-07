@@ -28,6 +28,9 @@ function App() {
           <li>
             <Link to="/countrygame">Country Capital Game</Link>
           </li>
+          <li>
+            <Link to="/counterapp">Counter App History</Link>
+          </li>
         </ol>
       </nav>
     </>
