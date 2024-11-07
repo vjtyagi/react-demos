@@ -25,6 +25,9 @@ function App() {
           <li>
             <Link to="/interactive">Interactive Shape Game</Link>
           </li>
+          <li>
+            <Link to="/countrygame">Country Capital Game</Link>
+          </li>
         </ol>
       </nav>
     </>

@@ -1,0 +1,20 @@
+.game-container {
+    display: flex;
+    gap: 20px;
+    width: 500px;
+    flex-wrap: wrap;
+}
+.game-tile {
+    border-color: #414141;
+    border-width: 5px;
+}
+
+.game-tile--selected {
+    border-color: blue;
+}
+.game-tile--correct {
+    border-color: #66cc99;
+}
+.game-tile--wrong {
+    border-color: red;
+}

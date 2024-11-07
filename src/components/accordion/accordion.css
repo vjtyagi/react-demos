@@ -1,7 +1,4 @@
-body{
-    
-    background-color: #faf5f5d8;
-}
+
 .accordion-demo {
     width: 50%;
     margin: 0 auto;
@@ -30,7 +27,7 @@ body{
     border:none;
     outline:none;
 }
-button {
+.accordion button {
     background-color: #e7e6e6;
     color: #606d79;
     border:none;

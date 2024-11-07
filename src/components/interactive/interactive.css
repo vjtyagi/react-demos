@@ -1,6 +1,8 @@
 .box-container {
     width: 500px;
     margin: 0 auto;
+    background-color: #faf5f5d8;;
+    padding: 20px;
     
 }
 .box {

@@ -9,6 +9,7 @@ import ReservationSystem from "./components/booking/ReservationSystem.tsx";
 import Explorer from "./components/FileExplorer/Explorer.tsx";
 import AccordionDemo from "./components/accordion/AccordionDemo.tsx";
 import InteractiveShapeGame from "./components/interactive/InteractiveShapeGame.tsx";
+import Game from "./components/country_capital_game/Game.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/explorer" element={<Explorer />} />
         <Route path="/accordion" element={<AccordionDemo />} />
         <Route path="/interactive" element={<InteractiveShapeGame />} />
+        <Route path="/countrygame" element={<Game />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
