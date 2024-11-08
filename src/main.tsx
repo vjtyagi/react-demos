@@ -11,6 +11,7 @@ import AccordionDemo from "./components/accordion/AccordionDemo.tsx";
 import InteractiveShapeGame from "./components/interactive/InteractiveShapeGame.tsx";
 import Game from "./components/country_capital_game/Game.tsx";
 import CounterAppHistory from "./components/counter_app/CounterAppHistory.tsx";
+import Todo from "./components/todo_app/Todo.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/interactive" element={<InteractiveShapeGame />} />
         <Route path="/countrygame" element={<Game />} />
         <Route path="/counterapp" element={<CounterAppHistory />} />
+        <Route path="/todoapp" element={<Todo />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

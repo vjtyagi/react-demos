@@ -31,6 +31,9 @@ function App() {
           <li>
             <Link to="/counterapp">Counter App History</Link>
           </li>
+          <li>
+            <Link to="/todoapp">Todo App</Link>
+          </li>
         </ol>
       </nav>
     </>
