@@ -3,6 +3,14 @@ import "./todo.css";
 import todoReducer, { TodoItem } from "./todoReducer";
 import { useLocation } from "react-router-dom";
 import cx from "classnames";
+import {
+  ADD_TODO,
+  REMOVE_COMPLETED_TODOS,
+  REMOVE_TODO,
+  TOGGLE_ALL_TODOS,
+  TOGGLE_TODO,
+  UPDATE_TODO,
+} from "./constants";
 export default function Todo() {
   const [todos, dispatch] = useReducer(todoReducer, []);
   const { hash: route } = useLocation();
@@ -21,7 +29,7 @@ export default function Todo() {
   const addTodo = useCallback(
     (title: string) => {
       dispatch({
-        type: "ADD_TODO",
+        type: ADD_TODO,
         payload: title,
       });
     },
@@ -30,7 +38,7 @@ export default function Todo() {
   const handleToggleAll = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       dispatch({
-        type: "TOGGLE_ALL_TODOS",
+        type: TOGGLE_ALL_TODOS,
         payload: { completed: e.target.checked },
       });
     },
@@ -127,21 +135,21 @@ function TodoListItem({
   const [isEditing, setIsEditing] = useState(false);
   const handleToggle = useCallback(() => {
     dispatch({
-      type: "TOGGLE_TODO",
+      type: TOGGLE_TODO,
       payload: todo.id,
     });
   }, [dispatch]);
 
   const removeTodo = useCallback(() => {
     dispatch({
-      type: "REMOVE_TODO",
+      type: REMOVE_TODO,
       payload: todo.id,
     });
   }, [dispatch]);
   const updateTodo = useCallback(
     (value: string) => {
       dispatch({
-        type: "UPDATE_TODO",
+        type: UPDATE_TODO,
         payload: { id: todo.id, title: value },
       });
       setIsEditing(false);
@@ -197,7 +205,7 @@ function Footer({
   }, [todos]);
   const handleClearCompleted = useCallback(() => {
     dispatch({
-      type: "REMOVE_COMPLETED_TODOS",
+      type: REMOVE_COMPLETED_TODOS,
       payload: {},
     });
   }, [dispatch]);
