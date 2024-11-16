@@ -37,6 +37,9 @@ function App() {
           <li>
             <Link to="/quizapp">Quiz App</Link>
           </li>
+          <li>
+            <Link to="/jobapp">Job App</Link>
+          </li>
         </ol>
       </nav>
     </>

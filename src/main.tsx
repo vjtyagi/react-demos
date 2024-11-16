@@ -13,6 +13,7 @@ import Game from "./components/country_capital_game/Game.tsx";
 import CounterAppHistory from "./components/counter_app/CounterAppHistory.tsx";
 import Todo from "./components/todo_app/Todo.tsx";
 import QuizApp from "./components/quiz/QuizApp.tsx";
+import JobApp from "./components/job/JobApp.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/counterapp" element={<CounterAppHistory />} />
         <Route path="/todoapp" element={<Todo />} />
         <Route path="/quizapp" element={<QuizApp />} />
+        <Route path="/jobapp" element={<JobApp />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

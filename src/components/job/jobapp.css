@@ -1,0 +1,55 @@
+.job-app {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.error {
+    color: red;
+}
+.form-control {
+    padding: 10px;
+    width: 100%;
+}
+.form-control label {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.form-input input {
+    min-height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    outline:none;
+}
+.form-control .error {
+    padding-top: 5px;
+    font-size: 14px;
+}
+.form-control.form-error input{
+    border-color: red;
+}
+.form-control.form-error input:focus{
+    border-color: red;
+}
+.form-control .form-select {
+    width: 100%;
+    min-height: 50px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    padding: 0 10px;
+}
+.form-actions {
+    margin-top: 20px;
+    border-top: 1px solid #cecece;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.form-actions .form-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: chocolate;
+    margin: 0 5px;
+    cursor: pointer;
+}
