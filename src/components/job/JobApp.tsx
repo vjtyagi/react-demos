@@ -24,15 +24,16 @@ const initialFormData = {
   position: "fullstack",
   experience: "10",
 };
+const options = [
+  { value: "fullstack", label: "FullStack Developer" },
+  { value: "backend", label: "Backend Developer" },
+  { value: "frontend", label: "Frontend Developer" },
+];
 export default function JobApp() {
   const [formData, setFormData] =
     useState<Record<string, string>>(initialFormData);
   const [errors, setFormErrors] = useState<Record<string, string>>({});
-  const options = [
-    { value: "fullstack", label: "FullStack Developer" },
-    { value: "backend", label: "Backend Developer" },
-    { value: "frontend", label: "Frontend Developer" },
-  ];
+
   const showYoe = useMemo(
     () => formData.position === "backend" || formData.position === "fullstack",
     [formData.position]
@@ -51,10 +52,12 @@ export default function JobApp() {
     },
     [formData]
   );
+
   const handleReset = useCallback(() => {
     setFormData(initialFormData);
     setFormErrors({});
   }, [setFormData, setFormErrors]);
+
   const handleSubmit = useCallback(
     (event) => {
       event.preventDefault();
