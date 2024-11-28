@@ -8,15 +8,15 @@ export interface OptionType {
   label: string;
 }
 
-const validateName = (value) => {
+const validateName = (value: string) => {
   return value.length > 2 ? "" : "Name should be at least 3 characters";
 };
-const validateEmail = (value) =>
+const validateEmail = (value: string) =>
   /\S+@\S+\.\S+/.test(value) ? "" : "Enter a valid email";
 
-const validatePhone = (value) =>
+const validatePhone = (value: string) =>
   /^\d{10}$/.test(value) ? "" : "Phone number should be 10 digits";
-const validateUrl = (value) =>
+const validateUrl = (value: string) =>
   /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)(\/[\w-]*)*\/?$/.test(value)
     ? ""
     : "Please enter valid url";

@@ -40,6 +40,9 @@ function App() {
           <li>
             <Link to="/jobapp">Job App</Link>
           </li>
+          <li>
+            <Link to="/productapp">Product App</Link>
+          </li>
         </ol>
       </nav>
     </>
